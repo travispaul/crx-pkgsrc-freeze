@@ -1,0 +1,27 @@
+{
+    "name": {
+        "message": "PkgSrc Freeze Status",
+        "description" : "Name of extension"
+    },
+
+    "description": {
+        "message": "Shows status of PkgSrc freeze",
+        "description" : "Description of extension"
+    },
+
+    "status_unknown": {
+        "message": "Status of freeze is currently unknown",
+        "description" : "Unknown status of freeze"
+    },
+
+    "status_freeze": {
+        "message": "There is currently a freeze",
+        "description" : "Freeze is on"
+    },
+
+    "status_ok": {
+        "message": "There is no freeze",
+        "description" : "No freeze"
+    }
+
+}
