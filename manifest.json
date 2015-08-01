@@ -5,13 +5,13 @@
     "description": "__MSG_description__",
     "default_locale": "en",
     "manifest_version": 2,
-    "icons": { "16": "16-pkgsrc.png",
-               "48": "48-pkgsrc.png",
-               "128": "128-pkgsrc.png"},
+    "icons": { "16": "img/16-pkgsrc.png",
+               "48": "img/48-pkgsrc.png",
+               "128": "img/128-pkgsrc.png"},
     "browser_action": {
         "default_icon": {
-            "19": "19-default.png",
-            "38": "38-default.png"
+            "19": "img/19-default.png",
+            "38": "img/38-default.png"
         },
         "default_title": "__MSG_status_unknown__"
     },

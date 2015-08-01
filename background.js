@@ -2,11 +2,15 @@
 
     'use strict';
 
-    var 
-        url = 'http://www.pkgsrc.org/is-a-freeze-on/',
+    var manifest = chrome.runtime.getManifest(),
+
+        url = manifest.permissions[0],
+
         check = function (alarm, method) {
+
             var xhr = new XMLHttpRequest()
-                method = method || 'HEAD';
+
+            method = method || 'HEAD';
 
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === XMLHttpRequest.DONE) {
@@ -33,18 +37,26 @@
             status = doc.querySelector('#content > h1').innerText;
 
             if (status.toLowerCase() === 'yes') {
-                chrome.browserAction.setIcon({path: '19-freeze.png'});
-                chrome.browserAction.setTitle({title:
-                    chrome.i18n.getMessage('status_freeze')});
-            } else if (status.toLowerCase() === 'no') {
-                chrome.browserAction.setIcon({path: '19-pkgsrc.png'});
-                chrome.browserAction.setTitle({title:
-                    chrome.i18n.getMessage('status_ok')});
-            } else {
-                chrome.browserAction.setIcon({path: '19-default.png'});
-                chrome.browserAction.setTitle({title:
-                    chrome.i18n.getMessage('status_unknown')});
+
+                chrome.browserAction.setIcon({
+                    path: manifest.browser_action.default_icon[19]
+                });
+
+                chrome.browserAction.setTitle({
+                    title: chrome.i18n.getMessage('status_freeze')
+                });
+
+                return;
             }
+
+            chrome.browserAction.setIcon({
+                path: 'img/19-pkgsrc.png'
+            });
+
+            chrome.browserAction.setTitle({
+                title: chrome.i18n.getMessage('status_ok')
+            });
+
         };
 
     chrome.alarms.get('check-freeze', function (alarm) {
