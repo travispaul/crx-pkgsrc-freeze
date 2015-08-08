@@ -8,7 +8,7 @@
 
         check = function (alarm, method) {
 
-            var xhr = new XMLHttpRequest()
+            var xhr = new XMLHttpRequest();
 
             method = method || 'HEAD';
 
@@ -50,7 +50,7 @@
             }
 
             chrome.browserAction.setIcon({
-                path: 'img/19-pkgsrc.png'
+                path: manifest.icons[19]
             });
 
             chrome.browserAction.setTitle({
