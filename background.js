@@ -39,7 +39,7 @@
             if (status.toLowerCase() === 'yes') {
 
                 chrome.browserAction.setIcon({
-                    path: manifest.browser_action.default_icon[19]
+                    path: 'img/19-freeze.png'
                 });
 
                 chrome.browserAction.setTitle({
