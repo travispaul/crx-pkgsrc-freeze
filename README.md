@@ -1,5 +1,5 @@
 # crx-pkgsrc-freeze
-Shows current status of a PkgSrc freeze.
+Shows current status of a pkgsrc freeze.
 
 ![Screenshot](img/screenshot.png?raw=true "Screenshot")
 
@@ -10,6 +10,6 @@ Shows current status of a PkgSrc freeze.
 ## How it works
 
 This extenstion uses the chrome alarm API to make a HEAD request to
-http://www.pkgsrc.org/is-a-freeze-on/ to see if there is currently a PkgSrc
+http://www.pkgsrc.org/is-a-freeze-on/ to see if there is currently a pkgsrc
 freeze. If the ETag changes (or on the first request) we make a full GET and
 parse the document body to see if there is a freeze.
