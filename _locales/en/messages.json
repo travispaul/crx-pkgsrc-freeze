@@ -1,11 +1,11 @@
 {
     "name": {
-        "message": "PkgSrc Freeze Status",
+        "message": "Pkgsrc Freeze Status",
         "description" : "Name of extension"
     },
 
     "description": {
-        "message": "Shows status of PkgSrc freeze",
+        "message": "Shows status of Pkgsrc freeze",
         "description" : "Description of extension"
     },
 
